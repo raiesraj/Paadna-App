@@ -165,8 +165,9 @@ class _SecondScreenState extends State<SecondScreen> {
 class MyBtn extends StatelessWidget {
   final String title;
   final Color color;
+  final VoidCallback onPress;
   const MyBtn({
-    super.key, required this.title, required this.color,
+    super.key, required this.title, required this.color, required this.onPress,
   });
 
   @override
@@ -180,9 +181,7 @@ class MyBtn extends StatelessWidget {
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>const SigInScreenOne()));
-          },
+          onTap: onPress,
           child: Container(
             width: MediaQuery.of(context).size.width,
             height: 50,

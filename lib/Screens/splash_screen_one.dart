@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:mypanda/Screens/sceond_screen.dart';
+import 'package:mypanda/Screens/sigin_screen_one.dart';
+import 'package:mypanda/Utilis/colors.dart';
 import 'package:mypanda/Utilis/images.dart';
 
 class SplashScreenTwo extends StatefulWidget {
@@ -31,27 +33,32 @@ class _SplashScreenTwoState extends State<SplashScreenTwo> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.white,
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          const SizedBox(height: 10,),
           Center(
-            child: Image.asset(AppImages().waterImage,height: 320,),
+            child: Image.asset(AppImages().logoImage,width: 500,),
           ),
-          Center(
-            child: Image.asset(AppImages().logoImage),
+          const SizedBox(height:100,),
+           MyBtn(title: "LOG IN",color: AppColors.blackColor,
+          onPress: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>const SigInScreenOne()));
+          },
           ),
-          Spacer(),
-          const Padding(
-            padding: EdgeInsets.only(bottom: 45),
-            //child: MyBtn(title: "SIGN IN"),
-          ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Center(child: Text("Already have a account",style: TextStyle(color: Colors.white),)),
-            ],
-          )
+          const SizedBox(height: 20,),
+           MyBtn(title: "Create a new account",color: AppColors.btnColorTwo,onPress: (){
+             Navigator.push(context, MaterialPageRoute(builder: (context)=>const SigInScreenOne()));
+           },),
+          // Row(
+          //   crossAxisAlignment: CrossAxisAlignment.center,
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   children: [
+          //     Center(child: Text("Already have a account",style: TextStyle(color: Colors.white),)),
+          //   ],
+          // ),
         ],
       ),
     );

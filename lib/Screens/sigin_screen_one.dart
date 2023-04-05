@@ -53,7 +53,12 @@ class SigInScreenOne extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: AppColors.appBarColorTwo,
-          leading: Icon(Icons.arrow_back),
+          leading:  IconButton(
+            onPressed: (){
+              Navigator.pop(context);
+            },
+            icon: Icon(Icons.arrow_back),
+          ),
           bottom: TabBar(
             indicatorColor: AppColors.appTabIndicatorColorTwo,
             unselectedLabelStyle: GoogleFonts.mulish(
@@ -199,7 +204,7 @@ class SigInTabScreen extends StatelessWidget {
             SizedBox(
               height: 30,
             ),
-            MyBtn(title: "LOG IN", color: Colors.black),
+            MyBtn(title: "LOG IN", color: Colors.black,onPress: (){},),
             SizedBox(
               height: 20,
             ),
@@ -360,7 +365,7 @@ class SigUpTabScreen extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            MyBtn(title: "SIGN UP WITH EMAIL", color: Colors.black),
+            MyBtn(title: "SIGN UP WITH EMAIL", color: Colors.black,onPress: (){},),
             SizedBox(
               height: 20,
             ),

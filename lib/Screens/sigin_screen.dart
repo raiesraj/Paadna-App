@@ -90,6 +90,7 @@ class _SigInScreenState extends State<SigInScreen> {
             ),
              MyBtn(
                color: AppColors.btnColor,
+              onPress: (){},
               title: "LOG IN",
             ),
             const SizedBox(

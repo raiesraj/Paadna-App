@@ -13,4 +13,5 @@ class AppColors{
   static const appGoogleTextColorTwo =    Color.fromRGBO(142, 142, 142, 1);
   static const appTabIndicatorColorTwo =    Color.fromRGBO(211, 174, 71, 1);
   static const appTexFiledUnderLineColorTwo =    Color.fromRGBO(142, 142, 142, 0.29);
+  static const homeCardBgColor =    Color.fromRGBO(233, 232, 210, 1);
 }

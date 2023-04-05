@@ -5,6 +5,8 @@ import 'package:mypanda/Screens/splash_screen.dart';
 import 'package:mypanda/Screens/splash_screen_one.dart';
 import 'package:mypanda/Utilis/images.dart';
 
+import 'Screens/home_page.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -14,15 +16,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return  const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AnimatedSplashScreen(
-        splash: Image.asset(AppImages().logoImage), nextScreen: SplashScreenTwo(),
-      backgroundColor: Colors.black,
-        splashIconSize: 200,
-        splashTransition: SplashTransition.slideTransition,
-
-      ),
+      home: HomePage(),
     );
   }
 }
