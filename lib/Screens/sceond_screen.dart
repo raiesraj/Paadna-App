@@ -1,8 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mypanda/Screens/sigin_screen.dart';
-import 'package:mypanda/Screens/sigin_screen_one.dart';
 import 'package:mypanda/Utilis/colors.dart';
 import 'package:mypanda/Utilis/dummy_text.dart';
 import 'package:mypanda/Utilis/images.dart';
@@ -60,7 +58,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               const TextFiledTitle(
@@ -121,7 +119,7 @@ class _SecondScreenState extends State<SecondScreen> {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               // MyBtn(
@@ -132,7 +130,7 @@ class _SecondScreenState extends State<SecondScreen> {
                 child: Center(
                   child: RichText(
                     text: TextSpan(
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 15,
                       ),
                       children: [
@@ -177,12 +175,12 @@ class MyBtn extends StatelessWidget {
         color: color,
         borderRadius: BorderRadius.circular(8),
       ),
-      margin: EdgeInsets.symmetric(horizontal: 16),
+      margin: const EdgeInsets.symmetric(horizontal: 16),
       child: Material(
         color: Colors.transparent,
         child: InkWell(
           onTap: onPress,
-          child: Container(
+          child: SizedBox(
             width: MediaQuery.of(context).size.width,
             height: 50,
             child: Center(
